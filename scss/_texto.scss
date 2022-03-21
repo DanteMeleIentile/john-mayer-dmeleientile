@@ -1,0 +1,63 @@
+p{
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    letter-spacing: .06em;
+}
+
+td{
+    @extend p
+}
+
+/* Para cumplir la cosigna del desafio se realiza la siguiente estructura:
+ *  1_ Map que declara la "colección de varibles"
+ *  2_ Clase que toma los cada dato del mapa
+ *  3_ Mixin que crea las variables a las que les daremos valor en el sig. paso
+ *  4_ Clase que llamaremos en el html que contendrá:
+ *  - Da valor a las variables del punto 3
+ *      - extiende los valores de la clase del punto 2
+        - Agrega estilos (opcional) */
+
+
+$tamanos-texto: (
+    logo: 2.8rem,
+    titulo: 2rem,
+);
+
+.nav_logo_txt{
+    font-size: map-get($tamanos-texto, logo);
+}
+
+.titulo{
+    font-size: map-get($tamanos-texto, titulo);
+}
+
+
+@mixin esp-logo ($pad, $mar) {
+    padding: $pad;
+    margin: $mar;
+}
+
+.nav_logo_style{
+    @include esp-logo(0, 0);
+    @extend .nav_logo_txt;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    text-shadow: .15rem .15rem 0 #5a3159;
+}
+
+h2{
+    @include esp-logo(0, 0);
+    @extend .titulo;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    text-shadow: .1rem .1rem 0 #5a3159;
+}

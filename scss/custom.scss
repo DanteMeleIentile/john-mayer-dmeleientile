@@ -1,0 +1,149 @@
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+@import "texto";
+
+body{
+    /* background-image: url(../img/bg-softrock-version.png); */
+    background-color: #859cb2;
+    font-family: aktiv-grotesk, sans-serif;
+    font-style: normal;
+    /* ARREGLOS PARA FOOTER EN BOTTOM */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+/* NAV ************/
+
+nav{
+  background-image: url(../img/bg-softrock-version.png);
+  background-image: linear-gradient(to right, rgba(111, 161, 193, 1), rgba(170, 149, 187, 1) 50%);
+  border-image: 3px;
+  border-bottom:3px solid #5a3159;
+}
+
+  .pestaña__activo{
+    background-color: rgba(235, 210, 255, 0.4) !important; 
+  }
+
+  .nav_tab_style{
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    letter-spacing: .06em;
+  }
+
+/* INDEX ************/
+
+#index__video{
+  max-height: 87vh;
+  background-image: linear-gradient(65deg, rgba(111, 161, 193, 1), rgba(170, 149, 187, 1));
+}
+
+.pie_de_tabla{
+  color: #5a3159;
+}
+
+/* GALERÍA ************/
+
+.galeria__carrusel{
+  max-height: 80vh !important;
+}
+
+.galeria__desk_images{
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+    .galeria__text_images{
+      position: absolute;
+      bottom: 0px;
+      font-size: 1.3rem;
+      @extend .titulo;
+      font-family: 'News Cycle', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: white;
+      text-shadow: .1rem .1rem 0 black;
+      background-image: linear-gradient(to right, rgba(111, 161, 193, 0.3), rgba(170, 149, 187, 0.6) 50%);
+      width: 100%;
+    }
+}
+
+/* OBRAS ************/
+
+.Obras__iframe{
+    height: 25rem;
+    padding: 5rem 0;
+}
+
+.spotify_color{
+  background-color: #5a3159;
+}
+
+/* VIDA ************/
+
+@media screen and (min-width: 768px) {
+  #vida__img_2{
+    order: 1;
+  }
+}
+
+/* CONTACTO ************/
+
+.contacto__map{
+  height: 25rem !important;
+}
+
+.form__comentarios{
+  height: 11rem !important;
+}
+
+/* FOOTER ************/
+footer{
+  margin-top: auto !important;
+
+  .footer__bordes{
+    border-top:3px solid #af4056;
+    border-bottom:3px solid #af4056;
+  }
+
+}
+
+/* SELECTORES DE ETIQUETAS *******************/
+
+address a{
+  color: #5a3159;
+
+  &:visited{
+    color: #5a3159;
+  }
+
+  &:hover{
+    transform: scale(1.2);
+    color: #5a3159;
+  }
+
+}
+
+/* Arreglos para navs !Firefox ************/
+a:-webkit-any-link{
+  color: #5a3159;
+}
