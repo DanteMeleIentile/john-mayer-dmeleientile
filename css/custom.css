@@ -7892,7 +7892,7 @@ nav {
 
 /* GALERÍA ************/
 .galeria__carrusel {
-  max-height: 80vh !important; }
+  max-height: 70vh !important; }
 
 .galeria__desk_images {
   position: relative; }
@@ -7916,7 +7916,7 @@ nav {
 
 /* OBRAS ************/
 .Obras__iframe {
-  height: 25rem;
+  height: 29rem;
   padding: 5rem 0; }
 
 .spotify_color {
